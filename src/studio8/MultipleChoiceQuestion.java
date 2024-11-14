@@ -1,16 +1,18 @@
 package studio8;
 
 public class MultipleChoiceQuestion extends Question {
-	
+	private String [] Choices; //instance variable
+		 
 	public MultipleChoiceQuestion(String prompt, String answer, int points, String[] choices) {
-		//FIXME
-		
-		//Call the super class constructor, then create and set
-		//instance variables for any values that aren't handled
-		//by the base class
+		super (prompt, answer, points); 
+		Choices = choices;
 	}
 	
 	public void displayPrompt() {
+		super.displayPrompt(); //calls method
+		for (int i = 0; i < Choices.length; i++) {
+			System.out.println(Choices[i]);
+		}
 		//FIXME
 		
 		/*
